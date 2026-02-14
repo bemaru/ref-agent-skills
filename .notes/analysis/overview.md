@@ -281,19 +281,26 @@ cp -r skills/{skill-name} .claude/skills/
 
 ## 10. Agent Skills vs Superpowers 관계
 
+Agent Skills와 Superpowers는 **상하 관계가 아니라 독립적인 프로젝트**이며, 동일한 SKILL.md 표준을 활용한다.
+
 ```
-Agent Skills 표준 (이 저장소)
+Agent Skills 표준 (SKILL.md 포맷 정의)
 │
 ├── 정의: SKILL.md 포맷, 디렉토리 구조, 스크립트 규칙
-├── 제공: 참조 구현 (react-best-practices, deploy 등)
 │
-└──→ Superpowers (obra/superpowers)
-     │
-     ├── 활용: Agent Skills 표준의 SKILL.md 포맷
-     ├── 추가: 개발 워크플로우 스킬 (brainstorming, TDD, debugging)
-     ├── 추가: 훅 시스템 (세션 시작 시 자동 주입)
-     ├── 추가: 서브에이전트 조율
-     └── 추가: 강제 메커니즘 (합리화 방지 등)
+├── Vercel 공개 스킬 (이 저장소에 포함)
+│   ├── react-best-practices (가이드라인)
+│   ├── composition-patterns (가이드라인)
+│   └── vercel-deploy-claimable (자동화)
+│
+├── Superpowers (obra/superpowers) — 독립 프로젝트
+│   ├── SKILL.md 포맷 활용
+│   ├── 개발 워크플로우 스킬 (brainstorming, TDD, debugging)
+│   ├── 훅 시스템 (세션 시작 시 자동 주입)
+│   ├── 서브에이전트 조율
+│   └── 강제 메커니즘 (합리화 방지 등)
+│
+└── 누구나 만드는 커스텀 스킬
 ```
 
 **핵심 차이점:**
@@ -301,6 +308,7 @@ Agent Skills 표준 (이 저장소)
 | 구분 | Agent Skills | Superpowers |
 |------|-------------|-------------|
 | 성격 | 표준 스펙 + 참조 구현 | 스킬 모음집 (프레임워크) |
+| 관계 | 표준 정의자 | 표준 활용자 |
 | 스킬 유형 | 가이드라인 + 자동화 | 워크플로우 + 프로세스 |
 | 복잡도 | 단순 (규칙 기반) | 복잡 (에이전트 조율) |
 | 목적 | 코드 품질 규칙 제공 | 개발 프로세스 전체 관리 |

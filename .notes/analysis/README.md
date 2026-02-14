@@ -22,16 +22,15 @@ Vercel Labs의 Agent Skills 오픈 표준을 분석한 개인 학습 자료입�
 ## 관계도
 
 ```
-Agent Skills 표준 (이 저장소)
-  ↓
-Vercel 공개 스킬 (react-best-practices 등)
-  ↓
-Superpowers (obra/superpowers) - 개발 워크플로우 스킬
-  ↓
-나만의 커스텀 스킬 (만들 예정)
+Agent Skills 표준 (SKILL.md 포맷 정의)
+  ├── Vercel 공개 스킬 (react-best-practices 등)
+  ├── Superpowers (obra/superpowers) - 개발 워크플로우 스킬
+  └── 나만의 커스텀 스킬
 ```
+
+> Agent Skills는 표준 스펙이고, Vercel 스킬과 Superpowers는 이 표준을 각각 독립적으로 활용하는 프로젝트.
 
 ## 분석 일자
 
-- **2026-02-07**
-- Fork 위치: `D:\repos\bemaru\fork\agent-skills`
+- **2026-02-07** (초기 분석)
+- **2026-02-14** (관계도 수정)
